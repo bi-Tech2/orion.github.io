@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bi.Tech - Download free HTML Templates</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="Fav.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-dark">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-dark  p-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-white" style="background: #121FCF;
+                    background: repeating-radial-gradient(ellipse farthest-side at top left, #121FCF 0%, #CF1512 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;">ORION</h1>
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navb"><i class="bi bi-list text-white"></i></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarCollapse">
+                    <div class="navbar-nav ms-auto bg-dark">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">Movies</a>
+                        <a href="service.html" class="nav-item nav-link">TV series</a>
+                        <!-- <a href="project.html" class="nav-item nav-link">Projects</a> -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Genre</a>
+                            <div class="dropdown-menu text-white mt-2">
+                                <a href="templates.html" class="dropdown-item">Action</a>
+                                <a href="feature.html" class="dropdown-item">Adventure</a>
+                                <a href="team.html" class="dropdown-item">Si Fi</a>
+                                <a href="faq.html" class="dropdown-item">Fantasy</a>
+                                <a href="testimonial.html" class="dropdown-item">Documentary</a>
+                                <a href="404.html" class="dropdown-item">Drama</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">How to download</a>
+                    </div>
+                    <butaton type="button" class="btn text-white nav-item bg-dark" style="border-top-right-radius: 0px; border-top-left-radius: 0;" data-bs-toggle="modal"
+                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(20, 24, 62, 0.7); backdrop-filter: blur(15px);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                    <div class="input-group mb-3" style="max-width: 600px;">
+                        <input type="text" id="search-input" class="form-control bg-transparent border-light p-3 text-white" placeholder="Type search keyword">
+                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                    <div id="loading-spinner"></div>
+                    <div id="autocomplete-results" class="autocomplete-results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+    <!-- Include the movie item template for autocomplete results -->
+    <template id="autocomplete-template">
+        <div class="autocomplete-item">
+            <a href="#" style="display: flex; justify-content: space-between; gap: 1.2rem;">
+                <img src="" alt="">
+                <div>
+                    <h5 class="word"></h5>
+                    <small class="year"></small>
+                </div>
+            </a>
+        </div>
+    </template>
+    <!-- Hero Start -->
+    <div class="container-fluid pt-5 bg-dark hero-header">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5" style="padding-bottom: 30px;">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">Aquaman</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Aquaman</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <img class="img-fluid" src="image/aquaman.jpg" alt="" style="border-radius: 20px; max-height: 300px; width: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img">
+                            <img class="img-fluid" src="image/aquaman.jpg" alt="Aquaman: The Lost Kingdom">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Aquaman</div>
+                        <h1 class="mb-4">Dive into the Epic World of Aquaman: The Lost Kingdom</h1>
+                        <p class="mb-4">Join Arthur Curry, the half-human, half-Atlantean hero, as he embarks on an epic journey to save his underwater kingdom. With stunning visuals and action-packed scenes, Aquaman: The Lost Kingdom is a cinematic experience like no other.</p>
+                        <p class="mb-4">Experience the breathtaking adventure and uncover the secrets of Atlantis. This movie is a must-watch for all fans of superhero and action films.</p>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Stunning Visuals</h6>
+                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i> Epic Storyline</h6>
+                            </div>
+                            <div class="col-sm-6">
+                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Action-Packed</h6>
+                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i> Star-Studded Cast</h6>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mt-4">
+                            <a class="btn btn-primary rounded-pill px-4 me-3" href="https://loadedfiles.org/1258bc916bddb6c7?pt=TVRiazd0RGk1MGdTcDNhNzB3QzFMMmt5VkVreWQwRmFWbTlSV0NzNWJYQXJPR0YwZDBFOVBRPT0%3D" download="-_-">Download <i class="bi bi-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-dark feature pt-5">
+        <div class="container pt-5">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;margin-bottom: 80px;">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Related Movies</div>
+                <h1 class="mb-4" style="color: #dddde4;">Related Searches</h1>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="image/aquaman.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" style="padding: -150px;" href="proj100.html">
+                            <small>Action</small><small>Adventure</small><small>Si Fi</small>
+                            <h5 class="lh-base text-white mb-3">Aquaman: the lost kingdom...
+                            </h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="image/ant_man.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" href="project.html">
+                            <small>DSM.</small>
+                            <h5 class="lh-base text-white mb-3">Responvie creativity Web-app for Graphic Designers...
+                            </h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="image/1899.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" href="project.html">
+                            <small>MotoSpark</small>
+                            <h5 class="lh-base text-white mb-3">Aquaman: the lost kingdom
+                            </h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="image/arrow.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" href="project.html">
+                            <small>Proxology</small>
+                            <h5 class="lh-base text-white mb-3">Aquaman: the lost kingdom
+                            </h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+
+
+
+
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-white" style="background: #121FCF;
+                    background: repeating-radial-gradient(ellipse farthest-side at top left, #121FCF 30%, #CF1512 70%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;">ORION</h1>
+                </a>
+                <p class="mb-0">Your ultimate destination for the latest movies and TV shows. Download and stream high-quality content seamlessly. </p>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="text-white mb-4">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>Ajah, Lagos, Nigeria</p>
+                <p tel="09130993464" style="text-decoration: none;"><a href="tel:09130993464" style="text-decoration: none;"><i class="fa fa-phone-alt me-3"></i>+234 913 099 3464</a></p>
+                <p style="font-size: .8rem;"><a href="mailto:jodicksonjoshua@gmail.com"><i class="fa fa-envelope me-3"></i>jodicksonjoshua@gmail.com</a></p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="text-white mb-4">Quick Links</h5>
+                <a class="btn btn-link" href="about.html">About Us</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                <a class="btn btn-link" href="movies.html">Movies</a>
+                <a class="btn btn-link" href="genre.html">Genre</a>
+                <butaton type="button" class="btn text-white nav-item bg-primary" style="padding: 10px;margin-bottom: 40px; font-weight: 700; text-align: center;align-items: center;" data-bs-toggle="modal"
+                data-bs-target="#searchModal">Search<i class="fa fa-search" style="margin-left: 10px;"></i></butaton>
+
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="text-white mb-4">Our Services</h5>
+                <a class="btn btn-link" href="index.html">Latest Movie Releases</a>
+                <a class="btn btn-link" href="top.html">Top Rated Movies</a>
+                <a class="btn btn-link" href="tv.html">TV Shows</a>
+                <a class="btn btn-link" href="howtodownload.html">Download Guide</a>
+                <butaton type="button" class="btn text-white nav-item bg-primary" style="padding: 10px;margin-bottom: 40px; font-weight: 700; text-align: center;align-items: center;" data-bs-toggle="modal"
+                data-bs-target="#searchModal">Download App<i class="bi bi-download" style="margin-left: 10px;"></i></butaton>
+
+            </div>
+        </div>
+    </div>
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="index.html">ORION</a>, All Rights Reserved.
+                    Designed By <a class="border-bottom" href="https://bi-tech2.github.io/">BiTech2.0</a>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="index.html">Home</a>
+                        <a href="cookies.html">Cookies</a>
+                        <a href="howtodownload.html">Help</a>
+                        <a href="faq.html">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
