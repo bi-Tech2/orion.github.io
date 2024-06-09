@@ -11,10 +11,8 @@
     };
     spinner();
     
-    
     // Initiate the wowjs
     new WOW().init();
-
 
     // Sticky Navbar
     $(window).scroll(function () {
@@ -25,13 +23,11 @@
         }
     });
 
-
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
         delay: 10,
         time: 2000
     });
-    
     
     // Back to top button
     $(window).scroll(function () {
@@ -45,7 +41,6 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
@@ -63,11 +58,7 @@
     
 })(jQuery);
 
-
-
-
-/// Search Functionality///
-
+// Search Functionality
 const movies = [
     {
         title: "Aquaman: The Lost Kingdom",
@@ -102,20 +93,26 @@ const movies = [
     // Add more movies here
 ];
 
+let typingTimer;                // Timer identifier
+const typingInterval = 500;     // Time in ms (0.5 seconds)
+const searchInput = document.getElementById('search-input');
+const resultsContainer = document.getElementById('autocomplete-results');
+const loadingSpinner = document.getElementById('loading-spinner');
+
 function searchMovies() {
-    const input = document.getElementById('search-input').value.toLowerCase();
-    const resultsContainer = document.getElementById('autocomplete-results');
-    const loadingSpinner = document.getElementById('loading-spinner');
-    
+    const input = searchInput.value.toLowerCase();
     resultsContainer.innerHTML = '';
 
     if (input === '') {
         resultsContainer.style.display = 'none';
+        loadingSpinner.style.display = 'none';
         return;
     }
 
     loadingSpinner.style.display = 'block';
-    setTimeout(() => {
+
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(() => {
         const results = movies.filter(movie => movie.title.toLowerCase().includes(input));
         
         if (results.length > 0) {
@@ -136,20 +133,23 @@ function searchMovies() {
 
         resultsContainer.style.display = 'block';
         loadingSpinner.style.display = 'none';
-    }, 500); // Simulate a delay for loading effect
+    }, typingInterval);
 }
 
-document.getElementById('search-input').addEventListener('input', searchMovies);
+searchInput.addEventListener('input', () => {
+    loadingSpinner.style.display = 'block';
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(searchMovies, typingInterval);
+});
 
-document.getElementById('search-input').addEventListener('focus', () => {
-    if (document.getElementById('autocomplete-results').children.length > 0) {
-        document.getElementById('autocomplete-results').style.display = 'block';
+searchInput.addEventListener('focus', () => {
+    if (resultsContainer.children.length > 0) {
+        resultsContainer.style.display = 'block';
     }
 });
 
 document.addEventListener('click', (e) => {
-    
     if (!document.querySelector('.modal-content').contains(e.target)) {
-        document.getElementById('autocomplete-results').style.display = 'none';
+        resultsContainer.style.display = 'none';
     }
 });
