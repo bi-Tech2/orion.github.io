@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Bi.Tech - Download free HTML Templates</title>
+    <title>ORION - Download Movies for free</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="Fav.png" rel="icon">
+    <link href="Orion.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,60 +44,95 @@
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid sticky-top">
+    <div class="container-fluid sticky-top bg-dark">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <nav class="navbar navbar-expand-lg bg-dark  p-0">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="text-white">BI<span class="text-dark">.</span>Tech</h1>
+                    <h1 class="text-white" style="background: #121FCF;
+                    background: repeating-radial-gradient(ellipse farthest-side at top left, #121FCF 0%, #CF1512 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;">ORION</h1>
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navb"><i class="bi bi-list text-white"></i></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="project.html" class="nav-item nav-link active">Projects</a>
+                <div class="collapse navbar-collapse " id="navbarCollapse">
+                    <div class="navbar-nav ms-auto bg-dark">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="movies.html" class="nav-item nav-link">Movies</a>
+                        <a href="tv.html" class="nav-item nav-link">TV series</a>
+                        <!-- <a href="project.html" class="nav-item nav-link">Projects</a> -->
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Templates</a>
-                            <div class="dropdown-menu bg-light mt-2">
-                                <a href="templates.html" class="dropdown-item">Our Templates</a>
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="faq.html" class="dropdown-item">FAQs</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Genre</a>
+                            <div class="dropdown-menu text-white mt-2">
+                                <a href="action.html" class="dropdown-item">Action</a>
+                                <a href="adventure.html" class="dropdown-item">Adventure</a>
+                                <a href="sifi.html" class="dropdown-item">Si Fi</a>
+                                <a href="fantasy.html" class="dropdown-item">Fantasy</a>
+                                <a href="comedy.html" class="dropdown-item">Comedy</a>
+                                <a href="animation.html" class="dropdown-item">Animation</a>
+                                <a href="Horror.html" class="dropdown-item">Horror</a>
+
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="howtodownload.html" class="nav-item nav-link">How to download</a>
                     </div>
-                    <!-- <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
-                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
+                    <butaton type="button" class="btn text-white nav-item bg-dark" style="border-top-right-radius: 0px; border-top-left-radius: 0;" data-bs-toggle="modal"
+                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
                 </div>
             </nav>
         </div>
     </div>
     <!-- Navbar End -->
 
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(20, 24, 62, 0.7); backdrop-filter: blur(15px);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                    <div class="input-group mb-3" style="max-width: 600px;">
+                        <input type="text" id="search-input" class="form-control bg-transparent border-light p-3 text-white" placeholder="Type search keyword">
+                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                    <div id="loading-spinner"></div>
+                    <div id="autocomplete-results" class="autocomplete-results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
 
+    <!-- Include the movie item template for autocomplete results -->
+    <template id="autocomplete-template">
+        <div class="autocomplete-item">
+            <a href="#" style="display: flex; justify-content: space-between; gap: 1.2rem;">
+                <img src="" alt="">
+                <div>
+                    <h5 class="word"></h5>
+                    <small class="year"></small>
+                </div>
+            </a>
+        </div>
+    </template>
     <!-- Hero Start -->
-    <div class="container-fluid pt-5 bg-primary hero-header">
+    <div class="container-fluid pt-5 bg-dark hero-header">
         <div class="container pt-5">
             <div class="row g-5 pt-5" style="padding-bottom: 30px;">
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
-                    <h1 class="display-4 text-white mb-4 animated slideInRight">Pixology</h1>
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">Aquaman</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
                             <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Pixology</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Aquaman</li>
                         </ol>
                     </nav>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-lg-end">
-                    <video src="Pixology - Building Digital Product - Google Chrome 2024-01-25 17-04-14.mp4" controls class="img-fluid" alt="" style="border-radius: 20px; max-height: 400px;"></video>
+                    <img class="img-fluid" src="image/aquaman.jpg" alt="" style="border-radius: 20px; max-height: 300px; width: auto;">
                 </div>
             </div>
         </div>
@@ -106,40 +141,45 @@
 
 
 
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img">
-                        <img class="img-fluid" src="desktop.png">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Pixology</div>
-                    <h1 class="mb-4">We Make Your Business Smarter with Artificial Intelligence</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
-                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                        clita duo justo et tempor eirmod magna dolore erat amet</p>
-                    <p class="mb-4">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no
-                        labore lorem sit. Sanctus clita duo justo et tempor.</p>
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Responsivty</h6>
-                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i> HTML</h6>
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe id="youtube-video" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/UGc5Tzz19UY?autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i> CSS</h6>
-                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i> JS</h6>
-                        </div>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+                        <script>
+                            new WOW().init();
+                            
+                        </script>
                     </div>
-                    <div class="d-flex align-items-center mt-4">
-                        <a class="btn btn-primary rounded-pill px-4 me-3" href="pixology-master/index.html">Live Demo</a>
-                        <a class="btn btn-primary rounded-pill px-4 me-3" href="pixology-master.zip" download="pixology-master.zip">Download</a>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Aquaman</div>
+                        <h1 class="mb-4">Dive into the Epic World of Aquaman: The Lost Kingdom</h1>
+                        <p class="mb-4">Join Arthur Curry, the half-human, half-Atlantean hero, as he embarks on an epic journey to save his underwater kingdom. With stunning visuals and action-packed scenes, Aquaman: The Lost Kingdom is a cinematic experience like no other.</p>
+                        <p class="mb-4">Experience the breathtaking adventure and uncover the secrets of Atlantis. This movie is a must-watch for all fans of superhero and action films.</p>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Stunning Visuals</h6>
+                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i> Epic Storyline</h6>
+                            </div>
+                            <div class="col-sm-6">
+                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Action-Packed</h6>
+                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i> Star-Studded Cast</h6>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mt-4">
+                            <a class="btn btn-primary rounded-pill px-4 me-3" href="https://downloadwella.com/r74094hj4e3w/Aquaman.and.the.Lost.Kingdom.(NKIRI.COM).2023.WEBRip.DOWNLOADED.FROM.NKIRI.COM.mkv.html" target=_blank download="-_-">Download <i class="bi bi-download"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 
@@ -147,52 +187,68 @@
     <!-- Feature Start -->
     <div class="container-fluid bg-dark feature pt-5">
         <div class="container pt-5">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;margin-bottom: 80px;">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Related Movies</div>
+                <h1 class="mb-4" style="color: #dddde4;">Related Searches</h1>
+            </div>
+
             <div class="row g-5">
-                <div class="col-lg-6 align-self-center mb-md-5 pb-md-5 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Why Choose Us</div>
-                    <h1 class="text-white mb-4">Discover Our Unique Offerings</h1>
-                    <p class="text-light mb-4">Explore our services and experience excellence. We offer solutions tailored to your needs, ensuring satisfaction every step of the way.</p>
-                    <div class="d-flex align-items-center text-white mb-3">
-                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <span>Dedicated to Customer Satisfaction</span>
-                    </div>
-                    <div class="d-flex align-items-center text-white mb-3">
-                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <span>Customized Solutions for Your Business</span>
-                    </div>
-                    <div class="d-flex align-items-center text-white mb-3">
-                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <span>Experienced Team with a Proven Track Record</span>
-                    </div>
-                    <div class="row g-4 pt-3">
-                        <div class="col-sm-6">
-                            <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">
-                                <i class="fa fa-users fa-3x text-white"></i>
-                                <div class="ms-3">
-                                    <h2 class="text-white mb-0" data-toggle="counter-up">9999</h2>
-                                    <p class="text-white mb-0">Satisfied Clients</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">
-                                <i class="fa fa-check fa-3x text-white"></i>
-                                <div class="ms-3">
-                                    <h2 class="text-white mb-0" data-toggle="counter-up">9999</h2>
-                                    <p class="text-white mb-0">Successful Projects</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="die-hart-2-hollywood-movie.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" style="padding: -150px;" href="proj103.html">
+                            <d class="d" style="display: flex;">
+                                <small>Action</small><small>Adventure</small>
+                            </d>
+                            <small class="year">2024</small>
+                            <h5 class="lh-base text-white mb-3">Die Hart 2
+                            </h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-6 align-self-end text-center text-md-end wow fadeIn" data-wow-delay="0.5s" style="padding-bottom: 40px;">
-                    <img class="img-fluid" src="Blank 5 Grids Collage.png" alt="" style="border-radius: 20px;">
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="image/ant_man.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" href="project.html">
+                            <d class="d" style="display: flex;">
+                                <small>Action</small><small>Adventure</small>
+                            </d>
+                            <small class="year">2024</small>
+                            <h5 class="lh-base text-white mb-3">Antman: Quantumania
+                            </h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="image/1899.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" href="project.html">
+                            <d class="d" style="display: flex;">
+                                <small>Action</small><small>Adventure</small>
+                            </d><small>Si fi</small>
+                            <small class="year">2024</small>
+                            <h5 class="lh-base text-white mb-3">1899
+                            </h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="image/arrow.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" href="project.html">
+                            <small>TV series</small>
+                            <d class="d" style="display: flex;">
+                                <small>Action</small><small>Adventure</small>
+                            </d>
+                            <small class="year">2024</small>
+                                <h5 class="lh-base text-white mb-3">Green Arrow
+                            </h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,71 +261,70 @@
 
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer pt-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <a href="index.html" class="d-inline-block mb-3">
-                        <h1 class="text-white">Bi<span class="text-primary">.</span>Tech</h1>
-                    </a>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
-                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                        clita duo justo et tempor</p>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="text-white mb-4">Popular Link</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Career</a>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <h5 class="text-white mb-4">Our Services</h5>
-                    <a class="btn btn-link" href="">Robotic Automation</a>
-                    <a class="btn btn-link" href="">Machine learning</a>
-                    <a class="btn btn-link" href="">Predictive Analysis</a>
-                    <a class="btn btn-link" href="">Data Science</a>
-                    <a class="btn btn-link" href="">Robot Technology</a>
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-white" style="background: #121FCF;
+                    background: repeating-radial-gradient(ellipse farthest-side at top left, #121FCF 30%, #CF1512 70%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;">ORION</h1>
+                </a>
+                <p class="mb-0">Your ultimate destination for the latest movies and TV shows. Download and stream high-quality content seamlessly. </p>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="text-white mb-4">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>Ajah, Lagos, Nigeria</p>
+                <p tel="09130993464" style="text-decoration: none;"><a href="tel:09130993464" style="text-decoration: none;"><i class="fa fa-phone-alt me-3"></i>+234 913 099 3464</a></p>
+                <p style="font-size: .8rem;"><a href="mailto:jodicksonjoshua@gmail.com"><i class="fa fa-envelope me-3"></i>jodicksonjoshua@gmail.com</a></p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="https://twitter.com/Dickson53194258"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://web.facebook.com/profile.php?id=100083324149972"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/channel/UCHGhLrhKUKC3uVYKgiRDqdw"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/bi_tech2.0/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="container wow fadeIn" data-wow-delay="0.1s">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">BiTech</a>, All Right Reserved.
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="text-white mb-4">Quick Links</h5>
+                <a class="btn btn-link" href="movies.html">Movies</a>
+                <a class="btn btn-link" href="action.html">Genre</a>
+                <a class="btn btn-link" href="about.html">About Us</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                <butaton type="button" class="btn text-white nav-item bg-primary" style="padding: 10px;margin-bottom: 40px; font-weight: 700; text-align: center;align-items: center;" data-bs-toggle="modal"
+                data-bs-target="#searchModal">Search<i class="fa fa-search" style="margin-left: 10px;"></i></butaton>
 
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "BiTech". Thank you for your support. ***/-->
-                        Designed By <a href="https://bi-tech2.github.io/JoshDickson.github.io/">BiTech2.0</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FAQs</a>
-                        </div>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="text-white mb-4">Our Services</h5>
+                <a class="btn btn-link" href="index.html">Latest Movie Releases</a>
+                <a class="btn btn-link" href="movies.html">Top Rated Movies</a>
+                <a class="btn btn-link" href="tv.html">TV Shows</a>
+                <a class="btn btn-link" href="howtodownload.html">Download Guide</a>
+                <a type="button" class="btn text-white nav-item bg-primary" style="padding: 10px;margin-bottom: 40px; font-weight: 700; text-align: center;align-items: center;">Download App<i class="bi bi-download" style="margin-left: 10px;"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="index.html">ORION</a>, All Rights Reserved.
+                    Designed By <a class="border-bottom" href="https://www.instagram.com/bi_tech2.0/">BiTech2.0</a>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="index.html">Home</a>
+                        <a href="contact.html">Help</a>
+                        <a href="howtodownload.html">FAQs</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</div>
+<!-- Footer End -->
 
 
     <!-- Back to Top -->
