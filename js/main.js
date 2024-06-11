@@ -90,6 +90,123 @@ const movies = [
         image: "not-another-church-movie-hollywood-movie.jpg",
         link: "proj104.html"
     },
+
+
+
+
+
+    {
+        title: "Tarot",
+        year: "2024",
+        image: "tarot-hollywood-movie.jpg",
+        link: "proj40.html"
+    },
+    {
+        title: "The strangers chapter",
+        year: "2024",
+        image: "the-strangers-chapter-hollywood-movie.jpg",
+        link: "proj30.html"
+    },
+    {
+        title: "Under Paris",
+        year: "2024",
+        image: "under-paris-french-movie.jpg",
+        link: "proj20.html"
+    },
+
+    {
+        title: "Kill your lover",
+        year: "2024",
+        image: "kill-your-lover-hollywood-movie.jpg",
+        link: "proj10.html"
+    },
+    {
+        title: "Late bloomers",
+        year: "2024",
+        image: "late-bloomers-hollywood-movie.jpg",
+        link: "proj50.html"
+    },
+    {
+        title: "Life after fighting",
+        year: "2024",
+        image: "life-after-fighting-hollywood-movie.jpg",
+        link: "proj60.html"
+    },
+
+    {
+        title: "Hitman",
+        year: "2024",
+        image: "hitman-hollywood-movie.jpg",
+        link: "proj70.html"
+    },
+    {
+        title: "Big city greens",
+        year: "2024",
+        image: "big-city-greens-the-movie-hollywood-movie.jpg",
+        link: "proj80.html"
+    },
+    {
+        title: "Am I okay",
+        year: "2024",
+        image: "am-i-okay-hollywood-movie.jpg",
+        link: "proj90.html"
+    },
+
+
+
+
+    {
+        title: "Power Books II",
+        year: "2024",
+        image: "power-book-II-s04-hollywood-series-200x300.jpg",
+        link: "proj200.html"
+    },
+    {
+        title: "Doctor Who TV series",
+        year: "2024",
+        image: "doctor-who-tv-series2-200x300.jpg",
+        link: "proj201.html"
+    },
+    {
+        title: "Fantasmas",
+        year: "2024",
+        image: "fantasmas-hollywood-series-200x300.jpg",
+        link: "proj202.html"
+    },
+
+    {
+        title: "Mayor of Kingstown",
+        year: "2024",
+        image: "mayor-of-kingstown-hollywood-series-200x300.jpg",
+        link: "proj203.html"
+    },
+    {
+        title: "Billy the kid",
+        year: "2024",
+        image: "billy-the-kid-hollywood-series-200x300.jpg",
+        link: "proj204.html"
+    },
+    {
+        title: "Interview with the vampire",
+        year: "2024",
+        image: "interview-with-the-vampire-s02-hollywood-series-200x300.jpg",
+        link: "proj205.html"
+    },
+
+
+    {
+        title: "All American",
+        year: "2024",
+        image: "all-american-hollywood-series-200x300.jpg",
+        link: "proj206.html"
+    },
+
+    {
+        title: "Gajaman",
+        year: "2024",
+        image: "image/gajaman.jpg",
+        link: "project1.html"
+    },
     // Add more movies here
 ];
 

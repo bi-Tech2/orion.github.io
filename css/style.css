@@ -618,3 +618,13 @@ h6,
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+body {
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+  }
+
+.year{
+    font-size: .9rem;
+}
