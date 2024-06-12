@@ -145,11 +145,12 @@
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <a href="https://www.youtube-nocookie.com/embed/UGc5Tzz19UY?start=4&end=4&vq=hd1080&loop=1&playlist=UGc5Tzz19UY">
                         <div class="about-img">
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe id="youtube-video" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/UGc5Tzz19UY?autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
+                                <iframe src="https://www.youtube-nocookie.com/embed/UGc5Tzz19UY?start=4&end=4&vq=hd1080&loop=1&playlist=UGc5Tzz19UY" width="560" height="315" title="Aquaman and the Lost Kingdom | Trailer" frameborder="0" allowfullscreen></iframe>                            </div>
                         </div>
+                        </a>
                         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
                         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
@@ -162,7 +163,6 @@
                         <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Aquaman</div>
                         <h1 class="mb-4">Dive into the Epic World of Aquaman: The Lost Kingdom</h1>
                         <p class="mb-4">Join Arthur Curry, the half-human, half-Atlantean hero, as he embarks on an epic journey to save his underwater kingdom. With stunning visuals and action-packed scenes, Aquaman: The Lost Kingdom is a cinematic experience like no other.</p>
-                        <p class="mb-4">Experience the breathtaking adventure and uncover the secrets of Atlantis. This movie is a must-watch for all fans of superhero and action films.</p>
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i> Stunning Visuals</h6>
@@ -182,7 +182,306 @@
         </div>
 
 
+    <!-- Comment Section Start-->
+    <style>
+        .main-container {
+display: flex;
+flex-direction: column-reverse;
+align-items: center;
+margin-top: 100px;
+}
 
+.form-container {
+width: 90%;
+max-width: 600px;
+margin-top: 150px;
+color: #dddde4;
+}
+
+.form-row {
+    color: #dddde4;
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="url"] {
+width: 48%;
+}
+
+.textarea {
+width: 100%;
+height: 150px;
+padding: 20px;
+resize:vertical;
+border-color: var(--primary-color);
+background-color: transparent;
+background-color: var(--primary-color-light-u);
+transition: bottom 0.4s ease-in-out;
+/* Smooth transition */
+backdrop-filter: blur(10px);
+color: var(--text-color);
+/* Add blur effect */
+border-radius: 10px;
+background-color: var(--sidebar-color);
+border: 1px solid var(--color);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+font-size: 16px;
+transition: border-color 0.3s ease;
+margin-top: 20px;
+}
+.textarea:focus{
+outline: none;
+border-color: var(--primary-color);
+}
+.input{
+padding: 15px;
+color: var(--text);
+resize:vertical;
+border-color: var(--primary-color);
+background-color: transparent;
+background-color: var(--primary-color-light-u);
+transition: bottom 0.4s ease-in-out;
+/* Smooth transition */
+backdrop-filter: blur(10px);
+/* Add blur effect */
+border-radius: 10px;
+background-color: var(--sidebar-color);
+color: var(--text-color);
+border: 1px solid var(--color);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+font-size: 16px;
+transition: border-color 0.3s ease;
+}
+.input:focus{
+outline: none;
+border-color: var(--primary-color);
+}
+
+input[type="file"] {
+display: none;
+}
+
+.custom-file-upload,
+.nag {
+display: inline-block;
+padding: 10px 20px;
+cursor: pointer;
+background: linear-gradient(10deg,#800080, #006eff);
+color: rgb(251, 250, 250);
+border: none;
+border-radius: 5px;
+margin-bottom: 10px;
+}
+
+.custom-file-upload:hover {
+background-color: darken(var(--primary-color), 10%);
+}
+
+.results-container {
+width: 100%;
+padding: 20px 40px 20px 40px;
+box-sizing: border-box;
+color: var(--text);
+resize:vertical;
+border-color: var(--primary-color);
+background-color: transparent;
+background-color: var(--primary-color-light-u);
+transition: bottom 0.4s ease-in-out;
+/* Smooth transition */
+border-radius: 10px;
+margin-top: 20px;
+background-color: var(--sidebar-color);
+color: #dddde4;
+border: 1px solid #121FCF;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+font-size: 16px;
+transition: border-color 0.3s ease;
+}
+
+.comment-item {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+margin-bottom: 10px;
+border-bottom: 1px solid #121FCF;
+padding: 20px 20px;
+}
+
+.comment-item img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.comment-content {
+flex-grow: 1;
+overflow-wrap: break-word;
+}
+
+.delete-btn {
+/* display: none; */
+color: crimson;
+    /* cursor: pointer;
+padding: 10px;
+transition: .4s ease-in-out;
+color: azure;
+border-radius: 10px;
+
+margin-left: 10px;
+}.delete-btn:hover {
+background-color: rgb(176, 13, 46); */
+}
+
+@media (max-width: 600px) {
+.rex{
+    max-width: 50px;
+    height: 10px;
+}
+
+.delete-btn{
+    display: none;
+    /* margin-left: -2px;
+    font-size: .5rem;
+    margin: 25px 0px 10px -2px; */
+}
+.results-container{
+    padding: 1px;
+}
+.maili,
+.linki,
+.pag{
+    word-break: break-all;
+}
+
+}
+.maili,
+.linki{
+color: var(--text-color);
+font-size: .8rem;
+}
+.linki{
+margin-top: 405px;
+}
+.maili:hover,
+.linki:hover{
+text-decoration: underline;
+}
+.pag{
+word-break: break-all;
+font-weight: 700;
+padding-top: 10px;
+padding-bottom: 20px;
+}
+.imgg{
+    margin-right: 20px;
+}
+    </style>
+
+
+
+
+
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('comment-form');
+            const resultsContainer = document.getElementById('results');
+            const localStorageKey = 'commentsData';
+    
+            loadComments();
+    
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const file = formData.get('user-img');
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const website = formData.get('website');
+                const comment = formData.get('comment');
+    
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const userImg = e.target.result;
+                    const data = { userImg, name, email, website, comment };
+                    saveComment(data);
+                    addCommentToDOM(data);
+                    form.reset();
+                };
+                reader.readAsDataURL(file);
+            });
+    
+            function saveComment(data) {
+                let comments = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+                comments.push(data);
+                localStorage.setItem(localStorageKey, JSON.stringify(comments));
+            }
+    
+            function loadComments() {
+                const comments = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+                comments.forEach(addCommentToDOM);
+            }
+    
+            function addCommentToDOM(data) {
+                const commentItem = document.createElement('div');
+                commentItem.className = 'comment-item';
+                commentItem.innerHTML = `
+                    <img src="${data.userImg}" alt="${data.name}'s image" class"imgg">
+                    <div class="comment-content">
+                        <strong>${data.name}</strong><br> (<a href="mailto:${data.email}" class="maili">${data.email}</a>)<br><br>
+                        ${data.website ? `<a href="${data.website}" target="_blank" class="linki">${data.website}</a><br>` : ''}
+                        <p class="pag">${data.comment}</p>
+                    </div>
+                    <span class="delete-btn">Delete</span>
+                `;
+                resultsContainer.appendChild(commentItem);
+    
+                commentItem.querySelector('.delete-btn').addEventListener('click', function () {
+                    deleteComment(data, commentItem);
+                });
+            }
+    
+            function deleteComment(data, element) {
+                let comments = JSON.parse(localStorage.getItem(localStorageKey)) || [];
+                comments = comments.filter(comment => comment.comment !== data.comment || comment.email !== data.email);
+                localStorage.setItem(localStorageKey, JSON.stringify(comments));
+                element.remove();
+            }
+        });
+    </script>
+    
+
+    <div class="bg-dark">
+        <div class="main-container">
+            <div class="form-container">
+                <form id="comment-form">
+                    <div class="form-row">
+                        <label for="file-upload" class="custom-file-upload">
+                            Upload Image <i class='bx bx-image-add' style="font-size: 1.1rem; margin-bottom: -15px;"></i>
+                        </label>
+                        <input class="input" id="file-upload" type="file" name="user-img" accept="image/*" required>
+                        <input class="input fer" type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input class="input" type="email" name="email" placeholder="Email" required>
+                        <input class="input" type="url" name="website" placeholder="Website">
+                    </div>
+                    <textarea class="textarea" name="comment" placeholder="Comment" required></textarea><br>
+                    <button type="submit" class="nag">Submit</button>
+                </form>
+            </div> 
+            <div id="results" class="results-container">
+                <h2 class="text-white" style="margin-bottom: 50px;margin-top: 20px; margin-left: 25px;">Comment Section</h2>
+
+            </div>
+        </div>
+    </div>
+    <!-- Comment Section end-->
 
     <!-- Feature Start -->
     <div class="container-fluid bg-dark feature pt-5">
