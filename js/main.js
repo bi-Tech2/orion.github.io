@@ -203,9 +203,30 @@ const movies = [
 
     {
         title: "Gajaman",
-        year: "2024",
+        year: "2023",
         image: "image/gajaman.jpg",
         link: "project1.html"
+    },
+
+    {
+        title: "Antman: Quantumania",
+        year: "2023",
+        image: "image/ant_man.jpg",
+        link: "project.html"
+    },
+
+    {
+        title: "The Great Lillian Hall",
+        year: "2024",
+        image: "the-great-lillian-hall-hollywood-movie.jpg",
+        link: "great-lillian.html"
+    },
+
+    {
+        title: "Unsung Hero",
+        year: "2024",
+        image: "unsung-hero-hollywood-movie.jpg",
+        link: "unsung.html"
     },
     // Add more movies here
 ];
